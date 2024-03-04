@@ -8,6 +8,10 @@ export class Block {
   @Column()
   last_block: number;
 
-  @Column({ type: 'timestamp', nullable: true, default: () => 'CURRENT_TIMESTAMP' })
+  @Column({
+    type: 'timestamp',
+    nullable: true,
+    default: () => 'CURRENT_TIMESTAMP',
+  })
   updated_at: Date;
 }

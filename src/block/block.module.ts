@@ -9,9 +9,9 @@ import { BlockService } from './block.service';
 
 @Global()
 @Module({
-    imports: [TypeOrmModule.forFeature([Block])],
-    controllers: [],
-    providers: [BlockService],
-    exports: [BlockService],
+  imports: [TypeOrmModule.forFeature([Block])],
+  controllers: [],
+  providers: [BlockService],
+  exports: [BlockService],
 })
 export class BlockModule {}

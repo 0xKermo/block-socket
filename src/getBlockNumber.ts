@@ -1,4 +1,5 @@
-const RPC_URL = 'https://mainnet-rpc.fibrous.finance';
+const dotenv = require('dotenv');
+dotenv.config();
 export async function getBlockNumber(): Promise<number> {
   const request = {
     id: 1,
@@ -7,7 +8,7 @@ export async function getBlockNumber(): Promise<number> {
     params: [],
   };
   // Make the POST request
-  return await fetch(RPC_URL, {
+  return await fetch(process.env.RPC_URL, {
     method: 'POST',
     body: JSON.stringify(request),
     headers: {
